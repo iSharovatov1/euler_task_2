@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      const main = () => {
+        let prewNum = 2;
+        let currentNum = 8;
+        let total = 10;
+        while (currentNum <= 4000000) {
+          const newCurrent = currentNum * 4 + prewNum;
+          total += newCurrent;
+          prewNum = currentNum;
+          currentNum = newCurrent;
+        }
+        return total;
+      };
+      console.log(main())
+    </script>
+  </body>
+</html>
