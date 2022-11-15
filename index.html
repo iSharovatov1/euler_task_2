@@ -5,18 +5,20 @@
   </head>
   <body>
     <script>
-      const main = () => {
+      (function main() {
         let prewNum = 2;
         let currentNum = 8;
         let total = 10;
-        while (currentNum <= 4000000) {
-          const newCurrent = currentNum * 4 + prewNum;
+        var newCurrent = currentNum * 4 + prewNum;
+        while (newCurrent <= 4000000) {
           total += newCurrent;
           prewNum = currentNum;
           currentNum = newCurrent;
+          newCurrent = currentNum * 4 + prewNum;
         }
         return total;
-      };
+      }
+    )()
       console.log(main())
     </script>
   </body>
